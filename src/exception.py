@@ -4,6 +4,11 @@ from src.logger import logging
 
 def error_message_details(error, error_detail: sys):
   _, _, exc_tb = error_detail.exc_info()
+
+  '''
+  This line extracts the file name where the exception occurred. It navigates through the traceback object (exc_tb) to the 
+  frame object (tb_frame), then to the code object (f_code), and finally gets the file name (co_filename).
+  '''
   file_name = exc_tb.tb_frame.f_code.co_filename
   
   error_message = "Error occurred in python script name [{0}] line number [{1}] error message[{2}]".format(
