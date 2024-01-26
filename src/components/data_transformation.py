@@ -32,7 +32,7 @@ class DataTransformation:
         "race_ethnicity",
         "parental_level_of_education",
         "lunch",
-        "test_preparation_course",
+        "test_preparation_score",
       ]
 
       # handle missing values and then create pipeline 
